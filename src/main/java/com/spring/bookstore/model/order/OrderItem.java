@@ -20,7 +20,7 @@ public class OrderItem {
     @ManyToOne
     private UserOrder order;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Book book;
 
     private int quantity;
