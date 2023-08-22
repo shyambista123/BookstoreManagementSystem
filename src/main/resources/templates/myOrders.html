@@ -50,7 +50,7 @@
       </td>
       <td th:text="${order.totalAmount}"></td>
       <td>
-        <span th:text="${order.orderDate}"></span> <!-- Display the order date -->
+        <span th:text="${order.orderDate}"></span>
       </td>
       <td>
         <form th:action="@{/order/cancel/{orderId}(orderId=${order.id})}" method="post">

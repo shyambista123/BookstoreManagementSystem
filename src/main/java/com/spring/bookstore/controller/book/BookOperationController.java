@@ -36,14 +36,13 @@ public class BookOperationController {
     public String addBook(@ModelAttribute Book book, @RequestParam("imageFile") MultipartFile imageFile) {
         try {
             if (!imageFile.isEmpty()) {
-                String image = book.getTitle() + "-" + imageFile.getOriginalFilename();
+                String image = book.getTitle()+".png";
                 Files.copy(imageFile.getInputStream(), Paths.get(UPLOAD_DIR, image));
                 book.setImage(image);
             }
             bookService.saveBook(book);
         } catch (IOException e) {
             e.printStackTrace();
-            // Handle the exception appropriately
         }
         return "redirect:/books";
     }
@@ -67,14 +66,13 @@ public class BookOperationController {
         existingBook.setQuantityInStock(updatedBook.getQuantityInStock());
         try {
             if (!newImageFile.isEmpty()) {
-                String image = existingBook.getTitle() + "-" + newImageFile.getOriginalFilename();
+                String image = existingBook.getTitle()+".png";
                 Files.copy(newImageFile.getInputStream(), Paths.get(UPLOAD_DIR, image));
                 existingBook.setImage(image);
             }
             bookService.saveBook(existingBook);
         } catch (IOException e) {
             e.printStackTrace();
-            // Handle the exception appropriately
         }
 
         bookService.saveBook(existingBook);

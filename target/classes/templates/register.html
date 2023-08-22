@@ -20,7 +20,7 @@
     <div th:if="${errorMessage}" class="alert alert-warning">
         <p th:text="${errorMessage}"></p>
     </div>
-    <h1>Registration Form</h1>
+    <h1>User Registration Form</h1>
     <form class="container" th:object="${user}" th:action="@{/register}" method="post">
         <label for="firstName">First Name:</label>
         <input type="text" class="form-control" id="firstName" th:field="*{firstName}" />

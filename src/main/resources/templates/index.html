@@ -11,12 +11,7 @@
 </head>
 <body>
 <section class="container jumbotron mb-2 mb-0 text-center">
-<!--not working-->
-<!--    <div th:if="${message}" class="alert alert-info">-->
-<!--        <p th:text="${message}"></p>-->
-<!--    </div>-->
     <h1>Buy Your Favourite Books</h1>
-    <h2>Books</h2>
     <div class="container">
         <div class="row">
             <div th:each="book : ${books}" class="col-md-4">
@@ -43,7 +38,6 @@
                                 </button>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>

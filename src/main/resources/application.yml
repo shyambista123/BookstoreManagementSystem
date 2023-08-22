@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/online_bookstore_management_system
+    url: jdbc:mysql://localhost:3306/online_bookstore_management_system #your database url and database name
     username: root #set your username
     password: $hyam@123  #set your password
     driver-class-name: com.mysql.cj.jdbc.Driver

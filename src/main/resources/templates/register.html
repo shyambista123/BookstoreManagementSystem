@@ -13,6 +13,7 @@
 <section class="container jumbotron mt-0 mb-0 text-center">
     <div th:if="${param.success}" class="alert alert-info alert-dismissible fade show" role="alert">
         <strong>Congratulations 🎉🎉!</strong> You have registered successfully. Now verify your account and login!
+        The verification link will be seen in the console. Click the link and verify you email.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -20,7 +21,7 @@
     <div th:if="${errorMessage}" class="alert alert-warning">
         <p th:text="${errorMessage}"></p>
     </div>
-    <h1>Registration Form</h1>
+    <h1>User Registration Form</h1>
     <form class="container" th:object="${user}" th:action="@{/register}" method="post">
         <label for="firstName">First Name:</label>
         <input type="text" class="form-control" id="firstName" th:field="*{firstName}" />
