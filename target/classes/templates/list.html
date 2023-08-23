@@ -55,13 +55,10 @@
       <td th:text="${book.quantityInStock}"></td>
       <td>
         <img th:if="${book.image}" th:src="@{/images/{fileName}(fileName=${book.image})}" width="325" height="290" alt="Book Cover" class="card-img-top"/>
-
-<!--&lt;!&ndash;        <img th:src="@{data:image/png;base64,${#strings.toString(book.image)}}" height="50" width="50" />-->
-</td>
+      </td>
       <td th:text="${book.genreOfTheBook}"></td>
       <td th:text="${book.topicOfTheBook}"></td>
       <td>
-<!--        <a th:href="@{/books/edit/{id}(id=${book.id})}">Edit</a>-->
         <a th:href="@{/books/edit/{id}(id=${book.id})}">
           <i class="fas fa-pen-to-square mr-2"></i>
         </a>
